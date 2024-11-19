@@ -1,0 +1,31 @@
+[versions]
+agp = "8.7.2"
+
+appcompat = "1.7.0"
+constraintlayout = "2.2.0"
+core = "1.17.1"
+coreKtx = "1.15.0"
+coreVersion = "1.46.0"
+espressoCore = "3.6.1"
+junit = "4.13.2"
+junitVersion = "1.2.1"
+kotlin = "1.9.24"
+kotlinStdlibJdk7 = "1.9.24"
+sceneformUx = "1.17.1"
+
+[libraries]
+appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+ar-core = { module = "com.google.ar:core", version.ref = "coreVersion" }
+constraintlayout = { module = "androidx.constraintlayout:constraintlayout", version.ref = "constraintlayout" }
+core = { module = "com.google.ar.sceneform:core", version.ref = "core" }
+core-ktx = { module = "androidx.core:core-ktx", version.ref = "coreKtx" }
+espresso-core = { module = "androidx.test.espresso:espresso-core", version.ref = "espressoCore" }
+ext-junit = { module = "androidx.test.ext:junit", version.ref = "junitVersion" }
+junit = { module = "junit:junit", version.ref = "junit" }
+kotlin-stdlib-jdk7 = { module = "org.jetbrains.kotlin:kotlin-stdlib-jdk7", version.ref = "kotlinStdlibJdk7" }
+sceneform-ux = { module = "com.google.ar.sceneform.ux:sceneform-ux", version.ref = "sceneformUx" }
+
+[plugins]
+android-application = { id = "com.android.application", version.ref = "agp" }
+kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
