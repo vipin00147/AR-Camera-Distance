@@ -51,10 +51,13 @@ dependencies {
     implementation(libs.appcompat)
     implementation(libs.core.ktx)
     implementation(libs.constraintlayout)
+    implementation(libs.material)
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
     implementation(libs.sceneform.ux)
     implementation(libs.core)
     implementation(libs.ar.core)
+
+    implementation(libs.quickie.unbundled)
 }

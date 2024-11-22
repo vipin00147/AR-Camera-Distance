@@ -19,4 +19,11 @@
     </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="qr_code_scan">QR Code Scan</string>
+    <string name="camera_distance_from_the_object">Camera Distance from the object</string>
+    <string name="start_qr_code_scan">Start</string>
+    <string name="open_action">Open</string>
+    <string name="ok_action">Ok</string>
+    <string name="scan_barcode" translatable="false">Scan QR Code</string>
+
 </resources>

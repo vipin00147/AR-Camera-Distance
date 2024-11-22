@@ -8,12 +8,12 @@ import android.view.ViewGroup
 import androidx.appcompat.app.AppCompatActivity
 import com.example.arcameratask.R
 import com.example.arcameratask.activities.MeasurementActivity
+import com.example.arcameratask.activities.ROOT_CONTAINER_ID
 import com.example.arcameratask.base.BaseFragment
 import com.example.arcameratask.databinding.FragmentMainBinding
+import com.example.arcameratask.utils.changeFragment
 
 class MainFragment : BaseFragment<FragmentMainBinding>() {
-
-    private val buttonArrayList = ArrayList<String>()
 
     override fun onCreateBinding(
         inflater: LayoutInflater,
@@ -26,18 +26,14 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val buttonArray = resources.getStringArray(R.array.arcore_measurement_buttons)
-
-        buttonArray.map{it->
-            buttonArrayList.add(it)
-        }
-
         getBinding()?.let {
             with(it) {
-                toMeasurement.text = buttonArrayList[0]
+                btnCameraDistance.setOnClickListener {
+                    getBaseActivity().startIntentActivity<MeasurementActivity<Any>>(isFinish = false)
+                }
 
-                toMeasurement.setOnClickListener {
-                    getBaseActivity().startIntentActivity<MeasurementActivity<Any>>(isFinish = true)
+                btnStartQrCodeScan.setOnClickListener {
+                    QRCodeScanFragment().changeFragment(ROOT_CONTAINER_ID, getBaseActivity(), true)
                 }
             }
         }
