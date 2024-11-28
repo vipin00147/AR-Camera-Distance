@@ -33,7 +33,9 @@ class MainFragment : BaseFragment<FragmentMainBinding>() {
                 }
 
                 btnStartQrCodeScan.setOnClickListener {
-                    QRCodeScanFragment().changeFragment(ROOT_CONTAINER_ID, getBaseActivity(), true)
+
+                    //QRCodeScanFragment().changeFragment(ROOT_CONTAINER_ID, getBaseActivity(), true)
+                    CameraXClass().changeFragment(ROOT_CONTAINER_ID, getBaseActivity(), true)
                 }
             }
         }

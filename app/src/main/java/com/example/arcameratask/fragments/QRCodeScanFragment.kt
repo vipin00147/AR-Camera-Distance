@@ -4,6 +4,7 @@ import android.content.ActivityNotFoundException
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -67,6 +68,7 @@ class QRCodeScanFragment : BaseFragment<FragmentQRCodeScanBinding>() {
     private fun showSnackbar(result: QRResult) {
         val text = when (result) {
             is QRResult.QRSuccess -> {
+
                 result.content.rawValue
                 // decoding with default UTF-8 charset when rawValue is null will not result in meaningful output, demo purpose
                     ?: result.content.rawBytes?.let { String(it) }.orEmpty()
